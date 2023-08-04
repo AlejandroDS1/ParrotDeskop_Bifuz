@@ -1,0 +1,2 @@
+# Cambia el fondo de pantalla cada 15 minutos a uno random utilizando el script que hay en esa carpeta.
+*/15 * * * * bifuz ~/.config/bin/change_wallpaper.sh
