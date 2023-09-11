@@ -1,8 +1,8 @@
-# Script Parrot
+# Script Parrot 
 
 1.- Uso del Script
 
-	git clone https://github.com/xJackSx/BSPWMparrot.git
+	https://github.com/AlejandroDS1/ParrotDeskop_Bifuz
 
 	cd BSPWMparrot
 
