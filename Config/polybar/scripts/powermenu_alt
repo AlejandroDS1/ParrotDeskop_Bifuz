@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rofi_command="rofi -theme ~/.config/polybar/scripts/themes/powermenu_alt.rasi"
+#rofi_command="rofi -theme ~/.config/rofi/nord.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -12,7 +13,7 @@ suspend=" Sleep"
 logout=" Logout"
 
 # Variable passed to rofi
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown\n\n\n$uptime"
 
 chosen="$(echo -e "$options" | $rofi_command -p "System" -dmenu -selected-row 0)"
 case $chosen in
@@ -23,7 +24,8 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        i3lock
+		wallpaper_path=$(/bin/ls ~/Wallpaper/*.png | /usr/bin/sort -R | /usr/bin/head -n 1)
+        i3lock -e -i $wallpaper_path
         ;;
     $suspend)
         systemctl suspend

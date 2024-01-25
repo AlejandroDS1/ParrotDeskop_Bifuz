@@ -23,7 +23,7 @@ case $chosen in
     $reboot)
         systemctl reboot
         ;;
-    $lock)
+    $lock
         i3lock
         ;;
     $suspend)

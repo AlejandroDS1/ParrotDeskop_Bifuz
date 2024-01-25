@@ -1,40 +1,49 @@
 configuration {
     font:                           "Iosevka Nerd Font 10";
-    show-icons:                     true;
+    show-icons:                     false;
 	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            " {name}";
+    display-drun: 					":";
+    drun-display-format:            "{name}";
     threads:                        0;
     scroll-method:                  0;
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
-    location:                       7;
+    location:                       3;
 }
 
-@import "colors.rasi"
+@import "nord_system.rasi"
 
 window {
     transparency:                   "real";
-    background-color:               @background;
+    background-color:               @background-color;
     text-color:                     @foreground;
     border-radius:                  20px;
-    height:                         36%;
-    width:                          17%;
-    x-offset:                       30;
-    y-offset:                       -90;
+    height:                         23%;
+    width:                          10%;
+    x-offset:                       -10;
+    y-offset:                       40;
 }
 
 prompt {
     enabled: 						true;
-	padding: 						4px 4px 6px 12px;
+	padding: 						4px 4px 6px 6px;
 	background-color: 				@background;
-	text-color: 					@selected;
+	text-color: 					@foreground;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							"";
+    background-color:               @background;
+    text-color:                     @logo;
+    padding:                        5px 0px 0px 10px;
+	font:							"feather 10";
 }
 
 inputbar {
-	children: 						[ prompt, entry ];
+	children: 						[ textbox-prompt-colon, prompt ];
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
@@ -55,7 +64,7 @@ entry {
     horizontal-align:               0;
     placeholder:                    "Search";
     blink:                          true;
-    padding:                        5px 0px 0px 0px;
+    padding:                        4px 0px 0px 0px;
 }
 
 case-indicator {
@@ -69,7 +78,7 @@ listview {
     background-color:               @background;
     columns:                        1;
     spacing:                        4px;
-    cycle:                          false;
+    cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
 }
@@ -85,7 +94,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  20px;
+    border-radius:                  4px;
     padding:                        6px 6px 6px 6px;
 }
 

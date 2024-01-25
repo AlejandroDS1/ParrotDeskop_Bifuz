@@ -178,6 +178,6 @@ function cpy {
 	fi
 
 	echo $@ | xclip -sel clip
-	echo "Los parametrod son : $@"
+	echo "Los parametros son : $@"
 }
 
