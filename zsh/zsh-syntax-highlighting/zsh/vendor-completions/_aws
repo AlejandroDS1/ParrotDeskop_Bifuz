@@ -1,0 +1,6 @@
+#compdef aws
+
+autoload -Uz bashcompinit
+bashcompinit -i
+
+complete -C /usr/libexec/aws_completer aws
