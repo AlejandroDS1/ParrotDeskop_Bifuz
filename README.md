@@ -1,3 +1,12 @@
+# ParrotOS Desktop
+
+**Desktop Environment**: bspwm
+**Macros**: sxhkd
+**Shell**: zsh
+**Terminal**: Kitty
+
+![Screenshot of the desktop, blue theme oriented](./Screenshots/desktop.png?raw=true "Screenshot")
+
 # Script Parrot 
 
 1.- Uso del Script
